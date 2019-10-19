@@ -45,8 +45,8 @@ public class MyKafkaConsumer extends ShutdownableThread {
 		consumer.subscribe(Collections.singletonList(TOPIC));
 		ConsumerRecords<Integer, String> records = consumer.poll(1000);
 		for (ConsumerRecord<Integer, String> consumerRecord : records) {
-			System.out.println("获取的消息是==分区是" + consumerRecord.partition() + "消息key是" + consumerRecord.key()
-					+ "消息valus是=" + consumerRecord.value() + "消息的offset是" + consumerRecord.offset());
+			System.out.println("获取的消息是==分区是:   " + consumerRecord.partition() + "  消息key是:   " + consumerRecord.key()
+					+ "  消息valus是:   " + consumerRecord.value() + "  消息的offset是 :  " + consumerRecord.offset());
 		}
 
 	}
